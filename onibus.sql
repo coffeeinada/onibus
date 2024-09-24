@@ -107,8 +107,6 @@ DELETE FROM passageiro WHERE id = 1;
 
 SELECT * FROM passageiro;
 
-SELECT * FROM passageiro;
-
 SELECT * FROM onibus WHERE quebrado = 1;
 
 SELECT * FROM onibus WHERE em_manutencao = 1;
