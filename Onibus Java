@@ -1,0 +1,67 @@
+public class Passagem {
+    private int id;
+    private String origem;
+    private String destino;
+    private String data;
+    private String horario;
+    private double preco;
+    private boolean disponibilidade;
+
+}
+import java.util.List;
+
+public class PassagemService {
+    private List<Passagem> passagens;
+
+    public void adicionarPassagem(Passagem passagem) {
+        // lógica para adicionar passagem
+    }
+
+    public Passagem buscarPassagem(int id) {
+        // lógica para buscar passagem
+    }
+
+    public void atualizarPassagem(Passagem passagem) {
+        // lógica para atualizar passagem
+    }
+
+    public void removerPassagem(int id) {
+        // lógica para remover passagem
+    }
+
+    public List<Passagem> listarPassagens() {
+        return passagens; // Retorna a lista de passagens
+    }
+}
+
+import java.util.Scanner;
+
+public class Menu {
+    private PassagemService passagemService = new PassagemService();
+    
+    public void exibirMenu() {
+        Scanner scanner = new Scanner(System.in);
+        int opcao;
+
+        do {
+            System.out.println("1. Adicionar Passagem");
+            System.out.println("2. Buscar Passagem");
+            System.out.println("3. Listar Passagens");
+            System.out.println("4. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    // Lógica para adicionar passagem
+                    break;
+                case 2:
+                    // Lógica para buscar passagem
+                    break;
+                case 3:
+                    // Lógica para listar passagens
+                    break;
+            }
+        } while (opcao != 4);
+    }
+}
