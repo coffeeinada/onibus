@@ -1,8 +1,11 @@
 CREATE TABLE `onibus` (
   `id` int NOT NULL AUTO_INCREMENT,
   `placa` varchar(10) COLLATE utf8_bin NOT NULL,
-  `quantidade_assento`INT NOT NULL,
+  `quantidade_assento` INT NOT NULL,
   `ativo` tinyint DEFAULT '1',
+  `disponibilidade` TINYINT DEFAULT '1',
+  `em_manutencao` TINYINT DEFAULT '0',
+  `quebrado` TINYINT DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `placa_UNIQUE` (`placa`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin;
@@ -48,17 +51,6 @@ CREATE TABLE `viagem` (
   CONSTRAINT `fk_viagem_onibus` FOREIGN KEY (`id_onibus`) REFERENCES `onibus` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin;
 
-CREATE TABLE `onibus` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `placa` varchar(10) COLLATE utf8_bin NOT NULL,
-  `quantidade_assento` INT NOT NULL,
-  `ativo` tinyint DEFAULT '1',
-  `disponibilidade` TINYINT DEFAULT '1',
-  `em_manutencao` TINYINT DEFAULT '0',
-  `quebrado` TINYINT DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `placa_UNIQUE` (`placa`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin;
 
 
 CREATE TABLE `passageiro` (
